@@ -1,0 +1,48 @@
+{
+  "api": {
+    "root": "https://qr.microservices.unifyem.dev",
+    "version": "0.0.1a",
+    "title": "Ticket and QR Code Generator",
+    "description": "An internal service for generating tickets and their corresponding QR codes.",
+    "contact": [
+      {
+        "name": "Jack Crane",
+        "email": "jack@jackcrane.rocks",
+        "url": "https://jackcrane.rocks"
+      }
+    ],
+    "license": {
+      "name": "For internal use only"
+    },
+    "termsOfService": "https://jackcrane.rocks",
+    "paths": [
+      {
+        "endpoint": "/version",
+        "method": "GET",
+        "group": "basic",
+        "description": "Returns the version of the API that the server is running. This should be used to reconcile the client with the server.",
+        "parameters": {
+          "route": [],
+          "query": []
+        },
+        "body": null,
+        "responses": [
+          {
+            "code": 200,
+            "description": "The version of the API that the server is running.",
+            "body": {
+              "version": "0.0.1a"
+            }
+          },
+          {
+            "code": 500,
+            "description": "An error occurred while trying to get the version of the API.",
+            "body": {
+              "error": "An error occurred while trying to get the version of the API."
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

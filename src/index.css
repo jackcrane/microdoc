@@ -1,13 +1,113 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfMZg.ttf) format('truetype');
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/jetbrainsmono/v13/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxjPQ.ttf) format('truetype');
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  padding-right: 10px;
+}
+* {
+  font-family: 'Inter', sans-serif;
+}
+.App {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+header {
+  margin-top: 100px;
+  max-width: 1000px;
+  border-bottom: 10px solid #ededed;
+}
+header h2 {
+  font-family: 'JetBrains Mono', monospace;
+  margin: 0;
+  font-size: 20px;
+}
+header h1 {
+  font-size: 40px;
+  margin: 0;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  background-color: #ededed;
+  min-height: 100vh;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav ul li {
+  padding: 15px;
+}
+nav ul li .pill {
+  margin-right: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+}
+main .path {
+  border-bottom: 2px solid #ededed;
+  padding-bottom: 20px;
+}
+main .path .endpoint {
+  font-family: 'JetBrains Mono', monospace;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #383535;
+  border-radius: 10px;
+  transition: 0.2s;
+  font-size: 18px;
+}
+main .path .endpoint .base {
+  font-weight: 100;
+  opacity: 0.5;
+  user-select: none;
+  display: none;
+}
+main .path .endpoint:hover {
+  background-color: #383535;
+  color: #ededed;
+}
+main .path .endpoint:hover .base {
+  display: inline;
+}
+.pill {
+  display: inline;
+  padding: 2px 8px;
+  border-radius: 50px;
+  border: 2px solid #000;
+  font-size: 15px;
+}
+.pill.blue {
+  background-color: #cce5ff;
+  color: #007bff;
+  border-color: #007bff;
+}
+.pill.red {
+  background-color: #fae3e5;
+  color: #dc3545;
+  border-color: #dc3545;
+}
+.pill.green {
+  background-color: #afecbd;
+  color: #28a745;
+  border-color: #28a745;
 }

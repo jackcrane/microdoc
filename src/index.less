@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=JetBrains+Mono&display=swap');
+
+html, body {
+  padding: 0;
+  margin: 0;
+  padding-right: 10px;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+.App {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+header {
+  margin-top: 100px;
+  h2 {
+    font-family: 'JetBrains Mono', monospace;
+    margin: 0;
+    font-size: 20px;
+  }
+  h1 {
+    font-size: 40px;
+    margin: 0;
+  }
+  max-width: 1000px;
+  border-bottom: 10px solid #ededed;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  background-color: #ededed;
+  min-height: 100vh;
+  ul {
+    list-style: none;
+    padding: 0;
+    li {
+      padding: 15px;
+      .pill {
+        margin-right: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: #000;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+main {
+  .path {
+    border-bottom: 2px solid #ededed;
+    padding-bottom: 20px;
+    .endpoint {
+      font-family: 'JetBrains Mono', monospace;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+      border: 1px solid rgb(56, 53, 53);
+      border-radius: 10px;
+      transition: .2s;
+      font-size: 18px;
+      .base {
+        font-weight: 100;
+        opacity: .5;
+        user-select: none;
+        display: none;
+      }
+      &:hover {
+        background-color: rgb(56, 53, 53);
+        color: #ededed;
+        .base {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+.pill {
+  display: inline;
+  padding: 2px 8px;
+  border-radius: 50px;
+  border: 2px solid #000;
+  font-size: 15px;
+  &.blue {
+    background-color:lighten(#007bff, 40%);
+    color: #007bff;
+    border-color: #007bff
+  }
+  &.red {
+    background-color:lighten(#dc3545, 40%);
+    color: #dc3545;
+    border-color: #dc3545
+  }
+  &.green {
+    background-color:lighten(#28a745, 40%);
+    color: #28a745;
+    border-color: #28a745
+  }
+
+}
